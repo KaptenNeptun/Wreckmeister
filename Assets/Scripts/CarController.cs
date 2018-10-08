@@ -20,8 +20,6 @@ public class CarController : MonoBehaviour
     {
         m_HorizontalInput = Input.GetAxis("Horizontal");
         m_VerticalInput = Input.GetAxis("Vertical");
-        //print("Horizoninput= " + m_HorizontalInput);
-        //print("VerticInput= " + m_VerticalInput);
     }
     private void Steer()
     {
@@ -32,7 +30,7 @@ public class CarController : MonoBehaviour
     private void Accelerate()
     {
         frontLeftWheel.motorTorque = m_VerticalInput * motorForce;
-        //print(frontLeftWheel.motorTorque + " force");
+
         frontRightWheel.motorTorque = m_VerticalInput * motorForce;
     }
 
